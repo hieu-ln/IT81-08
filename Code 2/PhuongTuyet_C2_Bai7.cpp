@@ -49,7 +49,7 @@
 ////Cau 7.6
 //int Pop(int a[], int &front, int &rear, int &x)
 //{
-//	if (front != -1)
+//	if (front == -1)
 //		return 0;
 //	else
 //	{
