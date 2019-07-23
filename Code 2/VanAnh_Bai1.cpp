@@ -1,0 +1,171 @@
+//#include <iostream>
+//#include <stdlib.h>
+//using namespace std;
+//// cau 1.1
+//#define max 100
+//int a[max];
+//int n;
+////cau 1.2
+//void input(int a[], int &n)
+//{
+//	for (int i = 0; i < n; i++)
+//	{
+//		cout << "a[" << i << "]= ";
+//		cin >> a[i];
+//	}
+//}
+////cau 1.3
+//void output(int a[], int n)
+//{
+//	for (int i = 0; i < n; i++)
+//		cout << a[i] << " ";
+//}
+//void random(int a[], int &n)
+//{
+//	for (int i = 0; i < n; i++)
+//	{
+//		a[i] = rand() % 10;
+//	}
+//}
+////cau 1.4
+//int search(int a[], int n, int x)
+//{
+//	for (int i = 0; i < n; i++)
+//		if (a[i] == x)
+//			return 1;
+//	return 0;
+//}
+////cau 1.5
+//int add(int a[], int &n, int value)
+//{
+//	n++;
+//	for (int i = n - 1; i < n; i++)
+//	{
+//		a[n - 1] = value;
+//		return 1;
+//	}
+//	return 0;
+//}
+////cau 1.6
+//int delete_last(int a[], int &n)
+//{
+//	for (int i = 0; i < n; i++)
+//	{
+//		n--;
+//		return 1;
+//	}
+//	return 0;
+//}
+////cau 1.7
+//int del(int a[],int &n,int vtcanxoa)
+//{
+//	if (vtcanxoa >= 0 && vtcanxoa < n)
+//	{
+//		for (int j = vtcanxoa-1; j < n - 1; j++)
+//		{
+//			a[j] = a[j + 1];
+//		}
+//		n--;
+//		return 1;
+//	}
+//	return 0;
+//}
+////cau 1.8
+//int sad(int a[], int &n, int cantim)
+//{
+//	for (int i = 0; i < n; i++)
+//	{
+//		if (a[i] == cantim)
+//		{
+//			for(int j=i;j<n-1;j++)
+//			a[j] = a[j + 1];
+//			n--;
+//			return 1;
+//		}
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int n, vtcanxoa, x, y, chon, gtvitricuoi;
+//	cout << "----------Bai tap 1----------Chuong 2----------MENU--------" << endl;
+//	cout << "1. Nhap phan tu cho danh sach\n";
+//	cout << "2. Xuat danh sach\n";
+//	cout << "3. Nhap ngau nhien phan tu cho danh sach\n";
+//	cout << "4. Tim mot phan tu trong danh sach\n";
+//	cout << "5. Them mot phan tu vao cuoi danh sach\n";
+//	cout << "6. Xoa phan tu cuoi danh sach\n";
+//	cout << "7. Xoa phan tu tai vi tri thu i trong danh sach\n";
+//	cout << "8. Tim phan tu va xoa trong danh sach\n";
+//	cout << "9. Thoat\n";
+//	do
+//	{
+//		cout << "\nVui long chon yeu cau: ";
+//		cin >> chon;
+//		switch (chon)
+//		{
+//		case 1:
+//			do
+//			{
+//				cout << "Nhap so luong phan tu cho danh sach: ";
+//				cin >> n;
+//				if (n <= 0 || n > max)
+//					cout << "Nhap sai nhap lai\n";
+//			} while (n <= 0 || n > max);
+//			input(a, n);
+//			break;
+//		case 2:
+//			output(a, n);
+//			break;
+//		case 3:
+//			do
+//			{
+//				cout << "Nhap so luong phan tu cho danh sach: ";
+//				cin >> n;
+//				if (n <= 0 || n > max)
+//					cout << "Nhap sai nhap lai\n";
+//			} while (n <= 0 || n > max);
+//			random(a, n);
+//			break;
+//		case 4:
+//			cout << "Nhap gia tri can tim trong danh sach: ";
+//			cin >> x;
+//			if (search(a, n, x) == 1)
+//				cout << "Tim thay gia tri " << x << " trong danh sach\n";
+//			else
+//				cout << x << " khong tim thay trong danh sach\n";
+//			break;
+//		case 5:
+//			cout << "Nhap gia tri cho phan tu them cuoi: ";
+//			cin >> gtvitricuoi;
+//			if (add(a, n, gtvitricuoi) == 1)
+//				cout << "Them thanh cong\n";
+//			else
+//				cout << "Them phan tu that bai\n";
+//			break;
+//		case 6:
+//			delete_last(a, n);
+//			break;
+//		case 7:
+//			cout << "Nhap vi tri can xoa trong danh sach: ";
+//			cin >> vtcanxoa;
+//			if (del(a, n, vtcanxoa) == 1)
+//				cout << "Xoa thanh cong\n";
+//			else
+//				cout << "Xoa that bai\n";
+//			break;
+//		case 8:
+//			cout << "Nhap gia tri can tim trong danh sach va xoa gia tri do: ";
+//			cin >> y;
+//			if (sad(a, n, y) == 1)
+//				cout << "Thanh cong\n";
+//			else
+//				cout << "That bai\n";
+//			break;
+//		default:
+//			break;
+//		}
+//	} while (chon != 9);
+//	system("pause");
+//	return 0;
+//}
