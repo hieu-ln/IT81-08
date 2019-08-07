@@ -100,12 +100,16 @@ void outputNLR(Node *p)
 	while (p&&conti)
 	{
 		printf("%d ", p->infor);
-		if (p->right)stack[numofele++] = p->right;
-		if (p->left)p = p->left;
+		if (p->right)
+			stack[numofele++] = p->right;
+		if (p->left)
+			p = p->left;
 		else
 		{
-			if (numofele != 0)p = stack[--numofele];
-			else conti = 0;
+			if (numofele != 0)
+				p = stack[--numofele];
+			else 
+				conti = 0;
 		}
 	}
 }
