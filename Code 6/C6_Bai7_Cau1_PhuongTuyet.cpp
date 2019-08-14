@@ -194,7 +194,7 @@ int main()
 			cout << "loi nhap lieu!";
 			break;
 		}
-	} while (choice != 6);
+	} while (choice != 5);
 
 	cout << endl;
 	system("pause");
